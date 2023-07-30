@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wavesoffood.R
+import com.example.wavesoffood.adapter.CartAdapter
 import com.example.wavesoffood.adapter.MenuAdapter
 import com.example.wavesoffood.databinding.FragmentSearchBinding
 
@@ -33,11 +34,12 @@ class SearchFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_search, container, false)
-        MenuAdapter(filterMenuFoodName, filterMenuItemPrice, filterMenuImage)
+        val adapter = MenuAdapter(ArrayList(filterMenuFoodName),ArrayList(filterMenuItemPrice),ArrayList(filterMenuImage))
+
+
         binding.MenuRecyclerView.layoutManager=LinearLayoutManager(requireContext())
         binding.MenuRecyclerView.adapter = adapter
-
-        //setup for search view
+               //setup for search view
               setupSearchView()
 
         // show all menu items
