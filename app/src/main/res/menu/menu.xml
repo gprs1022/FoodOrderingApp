@@ -5,11 +5,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/home_04"
+        android:iconTint="@color/black"
         android:id="@+id/homeFragment"
         android:title="Home" />
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:iconTint="@color/black"
         android:icon="@drawable/notification_cart"
         android:id="@+id/cartFragment"
         android:title="Cart" />
@@ -17,18 +19,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/search"
+        android:iconTint="@color/black"
         android:id="@+id/searchFragment"
         android:title="Search" />
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/list"
+        android:iconTint="@color/black"
         android:id="@+id/historyFragment"
         android:title="History" />
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/user_01"
+        android:iconTint="@color/black"
         android:id="@+id/profileFragment"
         android:title="Profile" />
 </menu>

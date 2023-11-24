@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
+        android:fontFamily="@font/latobold"
         android:text="choose Your Location"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,12 +33,14 @@
 
         app:layout_constraintTop_toBottomOf="@+id/textView11"
         tools:layout_editor_absoluteX="0dp">
+
         <AutoCompleteTextView
+            android:id="@+id/listOfLocation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/listOfLocation"
-            android:text="Choose Location"
-            android:inputType="none"/>
+            android:fontFamily="@font/latoregular"
+            android:inputType="none"
+            android:text="Choose Location" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -45,6 +48,7 @@
         android:layout_width="331dp"
         android:layout_height="154dp"
         android:layout_margin="20dp"
+        android:fontFamily="@font/latoregular"
         android:text="To provide you with the best dining experience, we need your permission to access your device's location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience.&quot;"
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textView15"
@@ -57,9 +61,10 @@
         android:layout_width="132dp"
         android:layout_height="58dp"
         android:layout_marginBottom="68dp"
+        android:fontFamily="@font/latoregular"
         android:gravity="center"
         android:text="Design By  \n @gprspradeep"
-        android:textColor="@color/green"
+        android:textColor="@color/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView12"
         app:layout_constraintHorizontal_bias="0.501"

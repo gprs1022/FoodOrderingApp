@@ -18,11 +18,11 @@ import com.example.wavesoffood.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-  private lateinit var  binding: FragmentHomeBinding
+    private lateinit var binding: FragmentHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        }
+    }
 
 
     override fun onCreateView(
@@ -30,12 +30,12 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentHomeBinding.inflate(inflater,container,false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         binding.ViewAllMenu.setOnClickListener {
 
             val bottomSheetDialog = MenuBottomSheetFragment()
-            bottomSheetDialog.show(parentFragmentManager,"Test")
+            bottomSheetDialog.show(parentFragmentManager, "Test")
         }
         return binding.root
 
@@ -54,26 +54,28 @@ class HomeFragment : Fragment() {
         val imageSlider = binding.imageSlider
         imageSlider.setImageList(imageList)
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
-        imageSlider.setItemClickListener(object :ItemClickListener{
+        imageSlider.setItemClickListener(object : ItemClickListener {
             override fun doubleClick(position: Int) {
                 TODO("Not yet implemented")
             }
 
             override fun onItemSelected(position: Int) {
                 val itemPosition = imageList[position]
-                val itemMessage ="Selected Image $position"
-                Toast.makeText(requireContext(),itemMessage,Toast.LENGTH_SHORT).show()
+                val itemMessage = "Selected Image $position"
+                Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show()
 
             }
         })
 
-        val foodName = listOf("Burger","Sandwich","momo","Pizza")
-        val Price = listOf("$5","$7","$8","$10")
-        val popularFoodImages = listOf(R.drawable.allu, R.drawable.f3,R.drawable.f4,R.drawable.f5)
-        val adapter = PopularAdapter(foodName,Price,popularFoodImages)
+        val foodName = listOf("Burger", "Sandwich", "momo", "Pizza")
+        val Price = listOf("$5", "$7", "$8", "$10")
+        val popularFoodImages =
+                listOf(R.drawable.menu1, R.drawable.menu2, R.drawable.menu3, R.drawable.menu4)
+        val adapter = PopularAdapter(foodName, Price, popularFoodImages, requireContext())
         binding.PopularRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.PopularRecyclerView.adapter = adapter
     }
+
     companion object {
 
 

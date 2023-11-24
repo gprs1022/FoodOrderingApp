@@ -52,7 +52,7 @@
                 android:layout_marginEnd="10dp"
                 android:gravity="center"
                 android:text="$5"
-                android:textColor="@color/green"
+                android:textColor="@color/textColor"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
